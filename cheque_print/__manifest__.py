@@ -4,7 +4,7 @@
     'name': 'Dynamic Cheque Printing',
     'version': '11.0.1.1',
     'sequence': 150,
-    'category': 'Accounts',
+    'category': 'Accounting',
     'summary': 'Cheque Print',
     'description': """ Cheque Print """,
     'author': 'Future Dev',
