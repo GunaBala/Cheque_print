@@ -10,8 +10,8 @@
     'author': 'Future Dev',
     'website': '',
     'license': 'LGPL-3',
-    'price': '12',
-    'currency':'EUR',
+    #'price': '12',
+    #'currency':'EUR',
     'depends': ['account','web'],
     'init_xml': [],
     'data': [
