@@ -21,6 +21,7 @@
             'views/data.xml',
             'views/cheque_print_config_view.xml',
            ],
+    'images': ['static/description/banner.gif'],
     'installable': True,
     'auto_install': False,
     'application': True,
