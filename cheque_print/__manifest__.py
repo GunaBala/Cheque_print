@@ -9,7 +9,7 @@
     'description': """ Cheque Print """,
     'author': 'Future Dev',
     'website': '',
-    'license': 'OPL-1',
+    'license': 'LGPL-3',
     'price': '12',
     'currency':'EUR',
     'depends': ['account','web'],
