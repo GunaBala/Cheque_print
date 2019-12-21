@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="cheque_print_wizard_form" model="ir.ui.view">
+            <field name="name">Select Cheque to Print</field>
+            <field name="model">wizard.cheque.print</field>
+            <field name="arch" type="xml">
+            <form string="Print Cheque Print">
+                <group>
+                    <field name="cheque_id" required="1"/>
+                </group>
+                <footer>
+                    <button name="print_cheque" string="Print" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+            </field>
+        </record>
+        
+        <record id="action_wizard_cheque_print_payment" model="ir.actions.act_window">
+            <field name="name">Cheque Printing</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.cheque.print</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="account.model_account_payment" />
+        </record>
+        
+    </data>
+</odoo>

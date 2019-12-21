@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- Report -->
+        
+        <report 
+            id="report_account_payment_cheque_print"
+            model="account.payment"
+            string="Cheque Print Payment"
+            report_type="qweb-pdf"
+            name="cheque_print.report_cheque_print_template"
+            file="cheque_print.report_cheque_print_template"
+            menu="False"
+        /> 
+        
+        <!-- Template -->
+        
+        <template id="report_cheque_print_template">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        
+                        <t t-set="main_style" t-value="get_main_style" />
+                        <t t-set="date_style" t-value="get_date_style" />
+                        <t t-set="partner_style" t-value="get_partner_style" />
+                        <t t-set="words_style" t-value="get_words_style" />
+                        <t t-set="amount_style" t-value="get_amount_style" />
+                        <div class="mt32" t-att-style="main_style">
+                            <div t-att-style="date_style"><t t-esc="payment_date"/></div>
+                    
+                            <div t-att-style="partner_style"><t t-esc="partner_id"/></div>
+                            
+                            <div t-att-style="words_style"><t t-esc="amount_in_words"/></div>
+                            
+                            <div t-att-style="amount_style"><t t-esc="amount"/></div>
+                        </div>
+                        
+                    </div>
+                </t>
+            </t>
+        </template>
+
+
+    </data>
+</odoo>

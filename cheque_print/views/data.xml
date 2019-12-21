@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="paperformat_cheque" model="report.paperformat">
+			<field name="name">Cheque</field>
+			<field name="default" eval="False" />
+			<field name="format">A4</field>
+			<field name="page_height">0</field>
+			<field name="page_width">0</field>
+			<field name="orientation">Portrait</field>
+			<field name="margin_top">0</field>
+			<field name="margin_bottom">0</field>
+			<field name="margin_left">0</field>
+			<field name="margin_right">0</field>
+			<field name="header_line" eval="False" />
+			<field name="header_spacing">10</field>
+			<field name="dpi">90</field>
+			<field name="report_ids" eval="[(6,0,[ref('cheque_print.report_account_payment_cheque_print')]),(6,0,[ref('cheque_print.report_account_payment_cheque_print')])]" />
+		</record>
+	</data>
+    
+    <data noupdate="1">
+
+        <record id="account_payment_method_cheque" model="account.payment.method">
+            <field name="name">Cheques</field>
+            <field name="code">cheque_printing</field>
+            <field name="payment_type">outbound</field>
+        </record>
+    </data>
+</openerp>
